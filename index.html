@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header class="container-fluid">
+      <div class="row bg-primary text-light py-4">
+        <div class="col-12 d-flex justify-content-center text-outline">
+          <h1>Let's play a game!</h1>
+        </div>
+      </div>
+    </header>
+    <main class="container">
+      <div class="row">
+        <div class="col-12 d-flex justify-content-center pt-3">
+          <h3 class="text-dark">Choose One</h3>
+        </div>
+      </div>
+
+      <div class="row py-3">
+        <!-- PLAYER PICK -->
+        <div class="col-4 d-flex justify-content-center p-3">
+          <div id="rock" class="card p-3 shadow" onclick="playerPick(10)">
+            <i class="fa fa-globe fa-3x" aria-hidden="true"></i>
+          </div>
+        </div>
+        <div class="col-4 d-flex justify-content-center p-3">
+          <div id="paper" class="card p-3 shadow" onclick="playerPick(20)">
+            <i class="fa fa-file-o fa-3x" aria-hidden="true"></i>
+          </div>
+        </div>
+        <div class="col-4 d-flex justify-content-center p-3">
+          <div id="sissors" class="card p-3 shadow" onclick="playerPick(30)">
+            <i class="fa fa-scissors fa-3x" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- RESULTS -->
+      <div class="row py-3 bg-primary text-light">
+        <div
+          class="col-12 order-3 col-md-6 order-md-1 d-flex justify-content-center wrap"
+        >
+          <h6 class="npcName text-info">NPC Choice:</h6>
+        </div>
+        <div
+          class="col-12 order-1 col-md-6 order-md-2 d-flex justify-content-center"
+        >
+          <h6 class="playerName">You:</h6>
+        </div>
+        <div
+          class="col-12 order-4 col-md-6 order-md-2 d-flex justify-content-center wrap pb-3"
+        >
+          <h3 id="npc-choice" class="npcChoice text-info">
+            Awaiting Player Choice
+          </h3>
+        </div>
+        <div
+          class="col-12 order-2 col-md-6 col-md-2 d-flex justify-content-center pb-3"
+        >
+          <h2 id="game-result" class="gameResult">Make Selection</h2>
+        </div>
+      </div>
+
+      <!-- STATS -->
+      <div class="row stats py-3">
+        <div
+          class="col-12 order-1 col-md-4 order-md-1 d-flex justify-content-center"
+        >
+          Wins:&nbsp;
+          <div id="wins">0</div>
+        </div>
+        <div
+          class="col-12 order-2 col-md-4 order-md-2 d-flex justify-content-center"
+        >
+          Losses:&nbsp;
+          <div id="losses">0</div>
+        </div>
+        <div
+          class="col-12 order-3 col-md-4 order-md-3 d-flex justify-content-center"
+        >
+          Ties:&nbsp;
+          <div id="ties">0</div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="container-fluid bg-primary">
+      <div class="row bg-primary text-light">
+        <div class="col-12 d-flex justify-content-center text-light p-3">
+          <h6 class="d-flex mb-0">Thanks for playing!</h6>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
